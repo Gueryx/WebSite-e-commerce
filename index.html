@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>Boutique en ligne</title>
+</head>
+<body>
+    <!-- En-tête du site : logo, slogan et bouton du panier -->
+    <header class="site-header">
+        <div class="brand">
+            <span class="logo">eShop</span>
+            <span class="tagline">Mode, maison et gadgets</span>
+        </div>
+        <div class="header-actions">
+            <div class="search-wrapper">
+                <input id="productSearch" type="search" placeholder="Recherche de produits..." aria-label="Recherche de produits">
+                <div id="searchResults" class="search-results" aria-live="polite"></div>
+            </div>
+            <!-- Bouton qui affiche/masque le panneau du panier -->
+            <button id="cartButton" class="cart-button">Panier (<span id="cartCount">0</span>)</button>
+            <!-- Lien vers la page panier complète -->
+            <a href="cart.html" class="cart-link">Voir le panier</a>
+        </div>
+    </header>
+
+    <main class="page-layout">
+        <!-- Section des produits et présentation principale -->
+        <section class="product-grid">
+            <div class="hero">
+                <div>
+                    <p class="eyebrow">Nouveautés</p>
+                    <h1>Achetez malin avec notre boutique en ligne</h1>
+                    <p>Découvrez une sélection de produits tendance, livrés rapidement.</p>
+                </div>
+                <img src="image_produit/montre.png" alt="Shopping en ligne" loading="lazy">
+            </div>
+
+            <h2>Produits populaires</h2>
+            <div class="cards">
+                <!-- Carte produit 1 -->
+                <article class="product-card">
+                    <a href="produit-montre.html">
+                        <img src="image_produit/montre.png" alt="Montre design">
+                    </a>
+                    <div class="card-content">
+                        <h3>Montre connectée</h3>
+                        <p>Suivez vos activités quotidiennes avec style.</p>
+                        <div class="card-footer">
+                            <span class="price">79,99 €</span>
+                            <!-- Bouton d'ajout au panier avec données pour JavaScript -->
+                            <button class="add-to-cart" data-name="Montre connectée" data-price="79.99">Ajouter</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Carte produit 2 -->
+                <article class="product-card">
+                    <a href="produit-casque.html">
+                        <img src="image_produit/casque.png" alt="Casque audio">
+                    </a>
+                    <div class="card-content">
+                        <h3>Casque sans fil</h3>
+                        <p>Son clair, confort longue durée et autonomie maximale.</p>
+                        <div class="card-footer">
+                            <span class="price">280,00 €</span>
+                            <button class="add-to-cart" data-name="Casque sans fil" data-price="280.00">Ajouter</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Carte produit 3 -->
+                <article class="product-card">
+                    <a href="produit-tasse.html">
+                        <img src="image_produit/tasse.png" alt="Tasse thermos">
+                    </a>
+                    <div class="card-content">
+                        <h3>Tasse thermos</h3>
+                        <p>Garde votre boisson chaude toute la journée.</p>
+                        <div class="card-footer">
+                            <span class="price">24,50 €</span>
+                            <button class="add-to-cart" data-name="Tasse thermos" data-price="24.50">Ajouter</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Panneau du panier à droite -->
+        <aside class="cart-panel" id="cartPanel">
+            <h2>Votre panier</h2>
+            <div id="cartItems" class="cart-items">
+                <!-- Contenu du panier mis à jour par JavaScript -->
+                <p class="empty-cart">Votre panier est vide.</p>
+            </div>
+            <div class="cart-summary">
+                <div>Total</div>
+                <div><strong id="cartTotal">0,00 €</strong></div>
+            </div>
+            <!-- Bouton de commande (désactivé tant que le panier est vide) -->
+            <button id="checkoutButton" class="checkout-button" disabled>Aller au panier</button>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 eShop. Livraison rapide et retours gratuits.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

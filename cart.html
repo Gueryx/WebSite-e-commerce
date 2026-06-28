@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>Panier - eShop</title>
+</head>
+<body>
+    <!-- En-tête du site -->
+    <header class="site-header">
+        <div class="brand">
+            <span class="logo">eShop</span>
+            <span class="tagline">Mode, maison et gadgets</span>
+        </div>
+        <div class="header-actions">
+            <!-- Lien de retour à la boutique -->
+            <a href="index.html" class="back-link">← Retour à la boutique</a>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <h1>Mon panier</h1>
+
+        <!-- Section des articles du panier -->
+        <div class="cart-container">
+            <section class="cart-items-section">
+                <h2>Articles</h2>
+                <div id="cartItemsList" class="cart-items-list">
+                    <!-- Les articles seront affichés ici par JavaScript -->
+                    <p class="empty-message">Votre panier est vide.</p>
+                </div>
+            </section>
+
+            <!-- Résumé et commande -->
+            <section class="cart-summary-section">
+                <div class="summary-box">
+                    <h2>Résumé</h2>
+                    <div class="summary-line">
+                        <span>Sous-total</span>
+                        <span id="subtotal">0,00 €</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Frais de livraison</span>
+                        <span>Gratuit</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span id="cartGrandTotal">0,00 €</span>
+                    </div>
+                    <button id="checkoutBtn" class="checkout-btn" disabled>Valider la commande</button>
+                    <a href="index.html" class="continue-shopping">Continuer vos achats</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 eShop. Livraison rapide et retours gratuits.</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
